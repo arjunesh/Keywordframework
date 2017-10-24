@@ -66,7 +66,7 @@ public static void main(String[] args) throws Exception {
     	//ExcelUtils.setExcelFile(sPath, Constants.Sheet_TestSteps);
     	
     	//This is to start the Log4j logging in the test case using DOMConfigure class and method configure
-    	DOMConfigurator.configure("log4j.xml");
+    	//DOMConfigurator.configure("log4j.xml");
     	
     	//Declaring String variable for storing Object Repository path
     	String Path_OR = Constants.Path_OR;
@@ -108,7 +108,7 @@ public static void main(String[] args) throws Exception {
 				iTestLastStep = ExcelUtils.getTestStepsCount(Constants.Sheet_TestSteps, sTestCaseID, iTestStep);
 				System.out.println("iTestLastStep-->"+iTestLastStep);
 				//call startTestCase method from log (log4j) class to log title of the test case in text file
-				Log.startTestCase(sTestCaseID);
+				//Log.startTestCase(sTestCaseID);
 				//Setting the value of bResult variable to 'true' before starting every test step
 				bResult=true;
 				//This loop will execute number of times equal to Total number of test steps
@@ -127,7 +127,7 @@ public static void main(String[] args) throws Exception {
 						//If 'false' then store the test case result as Fail
 						ExcelUtils.setCellData(Constants.KEYWORD_FAIL,iTestcase,Constants.Col_Result,Constants.Sheet_TestCases);
 						//Call endTestCase method from log (log4j) class to End the test case in the logs
-						Log.endTestCase(sTestCaseID);
+						//Log.endTestCase(sTestCaseID);
 						//By this break statement, execution flow will not execute any more test step of the failed test case
 						break;
 						}
@@ -140,7 +140,7 @@ public static void main(String[] args) throws Exception {
 				if(bResult==true){
 				//Storing the result as Pass in the excel sheet
 				ExcelUtils.setCellData(Constants.KEYWORD_PASS,iTestcase,Constants.Col_Result,Constants.Sheet_TestCases);
-				Log.endTestCase(sTestCaseID);
+				//Log.endTestCase(sTestCaseID);
 				ActionKeywords.closeBrowser("","");
 				}
 			}
