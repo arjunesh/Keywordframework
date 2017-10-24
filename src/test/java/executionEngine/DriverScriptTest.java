@@ -79,6 +79,8 @@ public static void main(String[] args) throws Exception {
  
     	DriverScriptTest startEngine = new DriverScriptTest();
     	startEngine.execute_TestCase();
+    	ActionKeywords.closeBrowser("","");
+    	
     }
 
     private void execute_TestCase() throws Exception {    	
@@ -141,7 +143,7 @@ public static void main(String[] args) throws Exception {
 				//Storing the result as Pass in the excel sheet
 				ExcelUtils.setCellData(Constants.KEYWORD_PASS,iTestcase,Constants.Col_Result,Constants.Sheet_TestCases);
 				//Log.endTestCase(sTestCaseID);
-				ActionKeywords.closeBrowser("","");
+				//ActionKeywords.closeBrowser("","");
 				}
 			}
     	}
