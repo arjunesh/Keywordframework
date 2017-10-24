@@ -1,0 +1,14 @@
+<testng-results>
+  <reporter-output>
+  </reporter-output>
+  <suite name="Suite" duration-ms="10436" started-at="2017-10-23T13:43:25Z" finished-at="2017-10-23T13:43:36Z">
+    <groups>
+    </groups>
+    <test name="Test" duration-ms="10436" started-at="2017-10-23T13:43:25Z" finished-at="2017-10-23T13:43:36Z">
+      <class name="Automation.Selenium.datepicker">
+        <test-method status="PASS" signature="sample()" name="sample" duration-ms="10427" started-at="2017-10-23T13:43:25Z" finished-at="2017-10-23T13:43:36Z">
+        </test-method>
+      </class>
+    </test>
+  </suite>
+</testng-results>
