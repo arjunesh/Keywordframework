@@ -46,8 +46,8 @@ public class DriverScriptTest {
 	}
 
 @Test
-public static void main(String[] args) throws Exception {
-    //public void Initialize() throws Exception {
+//public static void main(String[] args) throws Exception {
+    public void Initialize() throws Exception {
 		
 		//Added this for initialize log4j system properly via TestNG
 		//BasicConfigurator.configure();
@@ -66,7 +66,7 @@ public static void main(String[] args) throws Exception {
     	//ExcelUtils.setExcelFile(sPath, Constants.Sheet_TestSteps);
     	
     	//This is to start the Log4j logging in the test case using DOMConfigure class and method configure
-    	//DOMConfigurator.configure("log4j.xml");
+    	DOMConfigurator.configure("log4j.xml");
     	
     	//Declaring String variable for storing Object Repository path
     	String Path_OR = Constants.Path_OR;
@@ -110,7 +110,7 @@ public static void main(String[] args) throws Exception {
 				iTestLastStep = ExcelUtils.getTestStepsCount(Constants.Sheet_TestSteps, sTestCaseID, iTestStep);
 				System.out.println("iTestLastStep-->"+iTestLastStep);
 				//call startTestCase method from log (log4j) class to log title of the test case in text file
-				//Log.startTestCase(sTestCaseID);
+				Log.startTestCase(sTestCaseID);
 				//Setting the value of bResult variable to 'true' before starting every test step
 				bResult=true;
 				//This loop will execute number of times equal to Total number of test steps

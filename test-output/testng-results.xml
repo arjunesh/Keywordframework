@@ -2,16 +2,16 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="24757" started-at="2017-10-20T19:51:40Z" finished-at="2017-10-20T19:52:04Z">
+  <suite name="Default suite" duration-ms="26077" started-at="2017-10-26T14:27:26Z" finished-at="2017-10-26T14:27:52Z">
     <groups>
     </groups>
-    <test name="Test" duration-ms="24757" started-at="2017-10-20T19:51:40Z" finished-at="2017-10-20T19:52:04Z">
-      <class name="Automation.Selenium.datepicker">
-        <test-method status="PASS" signature="sample()[pri:0, instance:Automation.Selenium.datepicker@cc285f4]" name="sample" duration-ms="24722" started-at="2017-10-20T15:51:40Z" finished-at="2017-10-20T15:52:04Z">
+    <test name="Default test" duration-ms="26077" started-at="2017-10-26T14:27:26Z" finished-at="2017-10-26T14:27:52Z">
+      <class name="executionEngine.DriverScriptTest">
+        <test-method status="PASS" signature="Initialize()[pri:0, instance:executionEngine.DriverScriptTest@42e26948]" name="Initialize" duration-ms="26044" started-at="2017-10-26T10:27:26Z" finished-at="2017-10-26T10:27:52Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- sample -->
-      </class> <!-- Automation.Selenium.datepicker -->
-    </test> <!-- Test -->
-  </suite> <!-- Suite -->
+        </test-method> <!-- Initialize -->
+      </class> <!-- executionEngine.DriverScriptTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

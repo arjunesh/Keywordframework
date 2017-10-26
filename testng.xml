@@ -3,7 +3,7 @@
 <suite name="Suite">
   <test name="Test">
     <classes>
-      <class name="Automation.Selenium.datepicker"/>
+      <class name="executionEngine.DriverScriptTest"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
