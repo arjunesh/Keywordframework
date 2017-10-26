@@ -29,7 +29,7 @@ public static void setExcelFile(String Path) throws Exception {
         //Remove below sheet name argument as we have two sheet names, one is from DataEgnine, another from test cases. Modify all below functions to add an extra argument of sheet name 
         //ExcelWSheet = ExcelWBook.getSheet(SheetName);
 	}catch(Exception e){
-	System.out.println("Class Utils | Method setExcelFile | Exception desc : "+e.getMessage());
+	Log.info("Class Utils | Method setExcelFile | Exception desc : "+e.getMessage());
 		DriverScriptTest.bResult = false;
 	}
         
@@ -44,7 +44,7 @@ public static String getCellData(int RowNum, int ColNum, String SheetName) throw
 	      String CellData = Cell.getStringCellValue();
 	      return CellData;	
 	}catch (Exception e){
-		//Log.error("Class Utils | Method getCellData | Exception desc : "+e.getMessage());
+		Log.error("Class Utils | Method getCellData | Exception desc : "+e.getMessage());
 		DriverScriptTest.bResult = false;
 		return"";
 	}
@@ -65,7 +65,7 @@ public static int getRowCount(String sheetName){
 		ExcelWSheet = ExcelWBook.getSheet(sheetName);
 		iNumber=ExcelWSheet.getLastRowNum()+1;
 	}catch(Exception e){
-		//Log.error("Class Utils | Method getRowCount | Exception desc : "+e.getMessage());
+		Log.error("Class Utils | Method getRowCount | Exception desc : "+e.getMessage());
 		DriverScriptTest.bResult = false;
 	}
 	return iNumber;
@@ -85,7 +85,7 @@ public static int getRowContains(String sTestCaseName, int ColNum, String SheetN
 		}
 	
 	}catch (Exception e){
-		//Log.error("Class Utils | Method getRowContains | Exception desc : "+e.getMessage());
+		Log.error("Class Utils | Method getRowContains | Exception desc : "+e.getMessage());
 		DriverScriptTest.bResult = false;
 	}
 	
@@ -107,7 +107,7 @@ public static int getTestStepsCount(String SheetName, String sTestCaseID, int iT
 		int number=ExcelWSheet.getLastRowNum()+1;
 		return number;
 	} catch (Exception e){
-		//Log.error("Class Utils | Method getRowContains | Exception desc : "+e.getMessage());
+		Log.error("Class Utils | Method getRowContains | Exception desc : "+e.getMessage());
 		DriverScriptTest.bResult = false;
 		return 0;
 	}

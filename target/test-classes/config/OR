@@ -24,3 +24,12 @@ m_lnk_Confirmbirth=//*[@id="u_0_g"]
 txt_Email=//*[@id="email"]
 txt_Password=//*[@id="pass"]
 btn_Login=//*[@id="loginbutton"]
+
+
+
+txt_firstname=//input[@id='FirstName']
+txt_lastname=//input[@id='LastName']
+select_gender=//input[@value='male']
+select_category=//select[@id='Category']
+click_button=//input[@id='Add']
+tbl_addview=//table[@id='VIPs']/tbody/tr[2]/td

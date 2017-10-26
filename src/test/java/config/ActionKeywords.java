@@ -3,6 +3,7 @@ package config;
 import java.io.File;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -17,6 +18,7 @@ import org.openqa.selenium.remote.BrowserType;
 import org.openqa.selenium.remote.DesiredCapabilities;
 //import org.testng.annotations.BeforeClass;
 //import org.testng.annotations.Parameters;
+import org.openqa.selenium.support.ui.Select;
 
 import com.beust.jcommander.Parameter;
 //import com.relevantcodes.extentreports.ExtentReports;
@@ -96,11 +98,11 @@ public class ActionKeywords {
 				//Constant Variable is used in place of URL
 				//As it was declared as 'static', it can be used by referring the class name
 				//Type the class name 'Constants' and press '.' dot, it will display all the memebers of the class Constants
-				driver.get(Constants.URL);
-				Log.info( "Navigated to URL - "+ Constants.URL);
+				driver.get(data);
+				Log.info( "Navigated to URL - "+ data);
 			}catch(Exception e){
 				Log.info("Not able to navigate --- " + e.getMessage());
-				Logger.log(LogStatus.FAIL, "Unable to Navigate to URL - "+ Constants.URL);
+				Logger.log(LogStatus.FAIL, "Unable to Navigate to URL - "+ data);
 				DriverScriptTest.bResult = false;
 			}
 				
@@ -132,14 +134,59 @@ public class ActionKeywords {
 //			
 //		}
 		
+		public static void select_listbox(String object, String data){
+			try{
+				Log.info("Clicking on Webelement "+ object);
+				System.out.println("object-->>>>"+object+"data-->>>"+data);
+				Select dropdown = new Select(driver.findElement(By.xpath(OR.getProperty(object))));
+				System.out.println("identified select box");
+				dropdown.selectByVisibleText(data);
+				System.out.println("selected data from list box");
+				Logger.log(LogStatus.PASS, "Succefully selected value from Lis "+ object);
+			}catch(Exception e){
+				Log.error("Not able to click --- " + e.getMessage());
+				Logger.log(LogStatus.FAIL, "Unable to select value from List "+ object);
+	 			DriverScriptTest.bResult = false;
+			}
+			
+		}
+		
+		public static void verify_add(String object, String data){
+			try{
+				Log.info("Clicking on Webelement "+ object);
+				List<WebElement> values = driver.findElements(By.xpath(OR.getProperty(object)));
+				
+				String stringcon = "";
+				for(WebElement value: values) {
+					stringcon = stringcon+value.getText()+"|";
+					//System.out.println("Added value--->"+value.getText());
+				}
+				//System.out.println(stringcon);
+				if(stringcon.equals(data)) {
+					Logger.log(LogStatus.PASS, "Add was succesfull "+ object);
+				}
+				else {
+					Logger.log(LogStatus.FAIL, "Add was not succesfull "+ object);
+				}
+				
+			}catch(Exception e){
+				Log.error("Not able to click --- " + e.getMessage());
+				Logger.log(LogStatus.FAIL, "Unable to Click on object "+ object);
+	 			DriverScriptTest.bResult = false;
+			}
+			
+		}
+		
+		
+		
 		public static void click(String object, String data){
 			try{
 				Log.info("Clicking on Webelement "+ object);
 				driver.findElement(By.xpath(OR.getProperty(object))).click();
-				Logger.log(LogStatus.PASS, "Succefully Clicked on button "+ object);
+				Logger.log(LogStatus.PASS, "Succefully Clicked on object "+ object);
 			}catch(Exception e){
 				Log.error("Not able to click --- " + e.getMessage());
-				Logger.log(LogStatus.FAIL, "Unable to Click on button "+ object);
+				Logger.log(LogStatus.FAIL, "Unable to Click on object "+ object);
 	 			DriverScriptTest.bResult = false;
 			}
 			
