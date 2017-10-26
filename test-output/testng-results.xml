@@ -2,12 +2,12 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="26077" started-at="2017-10-26T14:27:26Z" finished-at="2017-10-26T14:27:52Z">
+  <suite name="Default suite" duration-ms="25170" started-at="2017-10-26T16:25:46Z" finished-at="2017-10-26T16:26:11Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="26077" started-at="2017-10-26T14:27:26Z" finished-at="2017-10-26T14:27:52Z">
+    <test name="Default test" duration-ms="25170" started-at="2017-10-26T16:25:46Z" finished-at="2017-10-26T16:26:11Z">
       <class name="executionEngine.DriverScriptTest">
-        <test-method status="PASS" signature="Initialize()[pri:0, instance:executionEngine.DriverScriptTest@42e26948]" name="Initialize" duration-ms="26044" started-at="2017-10-26T10:27:26Z" finished-at="2017-10-26T10:27:52Z">
+        <test-method status="PASS" signature="Initialize()[pri:0, instance:executionEngine.DriverScriptTest@4206a205]" name="Initialize" duration-ms="25147" started-at="2017-10-26T12:25:46Z" finished-at="2017-10-26T12:26:11Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Initialize -->
